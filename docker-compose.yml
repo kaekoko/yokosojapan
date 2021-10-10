@@ -1,0 +1,11 @@
+version: '3'
+services:
+  api:
+    image: appoptics-express-app
+    env_file: .env
+    build: .
+    command: "npm run dev"
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/usr/src/app
